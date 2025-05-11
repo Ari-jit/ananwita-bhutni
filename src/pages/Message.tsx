@@ -65,7 +65,7 @@ const Message = () => {
           {/* Replace with your girlfriend's image */}
           <div className="w-32 h-32 rounded-full overflow-hidden mb-4 border-4 border-pink-300">
             <img 
-              src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?crop=faces&fit=crop&w=300&h=300" 
+              src="/lovable-uploads/077c2e92-8e77-4b7e-92e6-19e7adb46263.png" 
               alt="Ananwita" 
               className="w-full h-full object-cover"
             />

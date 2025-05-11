@@ -48,17 +48,33 @@
 }
 
 /* Animation for the falling roses */
-@keyframes fall {
-  0% {
-    transform: translateY(-100px) rotate(0deg);
-    opacity: 1;
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
   }
-  100% {
-    transform: translateY(100vh) rotate(360deg);
-    opacity: 0;
+  50% {
+    transform: translateY(-10px);
   }
 }
 
-[class*="text-4xl"]:has(span) {
-  animation: fall linear forwards;
+@keyframes pulse-glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 15px rgba(244,114,182,0.7));
+    transform: scale(1);
+  }
+  50% {
+    filter: drop-shadow(0 0 30px rgba(244,114,182,0.9));
+    transform: scale(1.05);
+  }
+}
+
+/* Canvas element styling */
+canvas {
+  cursor: pointer;
+  touch-action: none;
+}
+
+/* Apply animations to 3D objects */
+.heart-3d {
+  animation: pulse-glow 3s infinite;
 }
